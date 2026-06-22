@@ -2,7 +2,7 @@
 from pypdf import PdfReader
 import docx
 
-async def extract_document(filepath: str) -> str:
+def extract_document(filepath: str) -> str:
     if filepath.endswith(".pdf"):
         reader = PdfReader(filepath)
         text = "\n".join(page.extract_text() for page in reader.pages)
@@ -13,7 +13,7 @@ async def extract_document(filepath: str) -> str:
         text = "\n".join(p.text for p in doc.paragraphs)
         return text
     
-    elif filepath.endswith(".txt", ".md"):
+    elif filepath.endswith((".txt", ".md")):
         with open(filepath, "r", encoding="UTF-8") as f:
             return f.read()
         

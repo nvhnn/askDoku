@@ -1,9 +1,12 @@
 from fastapi import FastAPI, UploadFile
-from app.core.rag import generate_response
+from app.core import ingest_document
 
 app = FastAPI()
 
-@app.post("/upload")
-async def upload_file(file: UploadFile):
-    generate_response(file)
+@app.post("/ingest")
+async def ingest(file: UploadFile):
+    content = await file.read()
+    with open(f"test_docs/{file.filename}", "wb") as f:
+        f.write(content)
+    ingest_document(f"test_docs/{file.filename}")   
     return {"status": "ok"}

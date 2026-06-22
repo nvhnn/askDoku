@@ -1,9 +1,8 @@
 from dotenv import load_dotenv
-from anthropic import Anthropic
+from google import genai
 import os
 
 load_dotenv()
-client = Anthropic(
-    api_key=os.getenv("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com"
+client = genai.Client(
+    api_key=os.getenv("GEMINI_API_KEY")
 )

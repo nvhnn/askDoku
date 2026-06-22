@@ -1,5 +1,5 @@
 from .extract import extract_document
-from .chunking import chunk_text
+from .chunk import chunk_text
 
 def ingest_document(filepath: str):
     # extract

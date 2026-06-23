@@ -1,9 +1,9 @@
-from .llm_clients import client
+from .clients import gemini
 
 def embed_document(chunks: list[str]) -> list[list[float]]:
     embeddings = []
     for chunk in chunks:
-        res = client.models.embed_content(
+        res = gemini.models.embed_content(
             model="gemini-embedding-2",
             contents=chunk
         )

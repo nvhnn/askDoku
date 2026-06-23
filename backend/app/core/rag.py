@@ -1,4 +1,4 @@
-from app.core.llm_clients import client
+from app.core.clients import gemini
 from fastapi import UploadFile
 
 CHUNKS = 512

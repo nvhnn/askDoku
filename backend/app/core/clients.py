@@ -1,9 +1,15 @@
 from dotenv import load_dotenv
 from google import genai
+from anthropic import Anthropic
 from supabase import create_client
 import os
 
 load_dotenv()
+
+deepseek = Anthropic(
+    api_key=os.getenv("DEEPSEEK_API_KEY"),
+    base_url="https://api.deepseek.com/anthropic"
+)
 
 gemini = genai.Client(
     api_key=os.getenv("GEMINI_API_KEY")

@@ -12,7 +12,7 @@ async def ingest(file: UploadFile):
     return {"status": "ok"}
 
 @app.post("/ask")
-async def ask(question: str) -> str:
+async def ask(question: str):
     context = retrieve_context(question)
     answer = generate_response(question, context)
     return {"answer": answer}

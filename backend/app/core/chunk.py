@@ -16,6 +16,7 @@ def chunk_text(pages: list[dict], document_id, chunk_size: int = 500, overlap: i
                 "chunk_id": create_chunk_id(chunk_content),
                 "document_id": document_id,
                 "page_number": page["page_number"],
+                "section_title": None,
                 "content": chunk_content
             })
             step += chunk_size - overlap

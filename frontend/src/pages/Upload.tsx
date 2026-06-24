@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Upload() {
+  const navigate = useNavigate()
+
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formdata = new FormData(event.currentTarget);
@@ -10,6 +14,8 @@ export default function Upload() {
         method: "POST",
         body,
       })
+      .then(res => res.ok ? navigate("/ask") : console.log("Failed to upload file"));
+      {/* later add ui for error message replacing console.log */}
     }
   }
 

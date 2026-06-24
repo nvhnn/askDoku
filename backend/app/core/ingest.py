@@ -9,6 +9,6 @@ def ingest_document(filepath: str):
     # chunk
     chunks = chunk_text(text)
     # embed
-    embeddings = embed_document(chunks)
+    embeddings = embed_document(chunk["text"] for chunk in chunks)
     # store
     store_chunks(chunks, embeddings)

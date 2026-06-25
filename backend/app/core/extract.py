@@ -29,7 +29,7 @@ def extract_document(filepath: str) -> list[dict]:
     if filepath.endswith(".pdf"):
         reader = PdfReader(filepath)
         pages = []
-        for i, page in enumerate (reader.pages)
+        for i, page in enumerate (reader.pages):
             text = page.extract_text().strip()
             images = page.images
 
@@ -52,7 +52,7 @@ def extract_document(filepath: str) -> list[dict]:
                 "page_number": i + 1,
                 "content": final_text
             })
-            
+
         return pages
     
     elif filepath.endswith(".docx"):

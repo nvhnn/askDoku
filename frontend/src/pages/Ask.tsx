@@ -1,7 +1,14 @@
 import { useState } from "react";
 
+type Source = {
+    filename: string
+    page_number: number
+    section_title: string | null
+}
+
 export default function Ask() {
-    const [answer, setAnswer] = useState();
+    const [answer, setAnswer] = useState<string>();
+    const [sources, setSources] = useState<Source[]>([]);
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -12,6 +19,7 @@ export default function Ask() {
         });
         const data = await res.json();
         setAnswer(data.answer);
+        setSources(data.sources);
     }
 
     return (
@@ -21,7 +29,27 @@ export default function Ask() {
                 <button type="submit" className="bg-red-500 w-1/5 text-white rounded-full cursor-pointer">Enter</button>
             </form>
             {answer && <p className="w-2/3 text-center italic">{answer}</p>}
+            {sources.length > 0 && (
+                <div className="flex flex-wrap gap-2 w-2/3 justify-center">
+                    {sources.map((source, i) => (
+                        <span
+                            key={i}
+                            title={source.section_title ?? undefined}
+                            className="inline-flex items-center gap-1 px-3 py-1 bg-red-100 text-red-700 text-sm rounded-full cursor-pointer hover:bg-red-200 transition-colors"
+                        >
+                            <span>{source.filename}</span>
+                            <span className="text-red-400">·</span>
+                            <span>p.{source.page_number}</span>
+                            {source.section_title && (
+                                <>
+                                    <span className="text-red-400">·</span>
+                                    <span>{source.section_title}</span>
+                                </>
+                            )}
+                        </span>
+                    ))}
+                </div>
+            )}
         </div>
-
     )
 }

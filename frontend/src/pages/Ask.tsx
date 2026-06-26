@@ -12,14 +12,27 @@ export default function Ask() {
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        setAnswer("");
+        setSources([]);
         const formdata = new FormData(event.currentTarget);
         const question = formdata.get("text") as string;
         const res = await fetch(`http://localhost:8000/ask?question=${encodeURIComponent(question)}`, {
             method: "POST",
         });
-        const data = await res.json();
-        setAnswer(data.answer);
-        setSources(data.sources);
+        const utf8decoder = new TextDecoder();
+        const reader = res.body?.getReader();
+        if (!reader) return;
+        while (true) {
+            const { done, value } = await reader?.read();
+            if (done) break;
+            const decodedValue = utf8decoder.decode(value);
+            for (const line of decodedValue.split("\n\n")) {
+                if (!line) continue;
+                const response = line.slice(6);
+                if (response === "DONE") break;
+                response.startsWith("{") ? setSources(prev => [...prev, JSON.parse(response)]) : setAnswer(prev => prev + response)
+            }
+        }
     }
 
     return (

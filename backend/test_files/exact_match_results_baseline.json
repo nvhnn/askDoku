@@ -1,0 +1,398 @@
+[
+  {
+    "id": "po_mitteilung_nr",
+    "question": "What is the FH-Mitteilung number for the 2021 Prüfungsordnung?",
+    "expected_answer": "Nr. 32 / 2021",
+    "source_file": "PO.pdf",
+    "status": "PASS",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "filename": "PO.pdf",
+        "page_number": 1,
+        "similarity": 0.7778,
+        "content_snippet": "FH-Mitteilungen Herausgeber: Der Rektor der FH Aachen | Alle Rechte vorbehalten. Wiedergabe oder Druck nur mit Angabe von Quelle und Verfasser. Wiedergabe von Auszügen nur mit Genehmigung der FH Aachen. | Redaktion: Dezernat Z, Silvia Crummenerl, T +49. 241. 6009 51134 Lesbare Fassungen dienen der b"
+      },
+      {
+        "rank": 2,
+        "filename": "PO.pdf",
+        "page_number": 4,
+        "similarity": 0.7505,
+        "content_snippet": "4 FH-MITTEILUNG NR. 32 / 2021 | 19. Mä Rz 2021 jahr mindestens vier Wahlmodule pro Schwerpunkt an geboten werden. (9) Im ersten und zweiten Semester müssen die Studieren den insgesamt zwei Module laut Studienverlaufsplan ( Anlage 1) aus dem Softskill Wahlkatalog (Anlage 3) aus wählen. (10) Im Falle "
+      },
+      {
+        "rank": 3,
+        "filename": "PO.pdf",
+        "page_number": 2,
+        "similarity": 0.7332,
+        "content_snippet": "2 FH-MITTEILUNG NR. 32 / 2021 | 19. Mä Rz 2021 Prüfungsordnung für die Bachelorstudiengänge „Informatik“ und „Informatik mit Praxissemester“ im Fachbereich Elektrotechnik und Informationstechnik an der Fachhochschule Aachen vom 5. Februar 2015 – FH-Mitteilung Nr. 11/2015 in der Fassung der Bekanntma"
+      },
+      {
+        "rank": 4,
+        "filename": "PO.pdf",
+        "page_number": 6,
+        "similarity": 0.7209,
+        "content_snippet": "6 FH-MITTEILUNG NR. 32 / 2021 | 19. Mä Rz 2021 § 12 | Bachelorarbeit und Kolloquium (1) Die Bachelorarbeit ist eine eigenständige Ausarbeitung mit einer experimentellen, entwerferischen oder einer anderen informationstechnischen Beschreibung und Erläu terung ihrer Lösung. (2) Der Umfang der Bachelor"
+      },
+      {
+        "rank": 5,
+        "filename": "PO.pdf",
+        "page_number": 8,
+        "similarity": 0.7065,
+        "content_snippet": "8 FH-MITTEILUNG NR. 32 / 2021 | 19. Mä Rz 2021 Anlage 2 Wahlkatalog Es handelt sich bei diesem Katalog um eine beispielhafte Aufzählung der angebotenen Veranstaltungen. Diese werden nicht in jedem Semester angeboten. Die aktuell angebotenen Wahlmodule werden rechtzeitig vor Semesterbeginn bekannt ge"
+      }
+    ]
+  },
+  {
+    "id": "po_module_number",
+    "question": "What is the module number for Höhere Mathematik 1 für Informatik?",
+    "expected_answer": "51101",
+    "source_file": "PO.pdf",
+    "status": "PASS",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "filename": "PO.pdf",
+        "page_number": 7,
+        "similarity": 0.7222,
+        "content_snippet": "PRüFUNGSORDNUNG | BAcHELORSTUDIENGäNGE INFORMATIK MIT UND OHNE PRAxISSEMESTER 7 (Nichtamtliche lesbare Fassung zur änderungsordnung vom 19.03.2021 | Studienbeginn ab WS 2021/22) Anlage 1 Studienverlaufspläne Kernstudium Nr. Module und Studienfächer Bezeichnung 1. 2. 3. Sem. LP V ü P V ü P V ü P SWS "
+      },
+      {
+        "rank": 2,
+        "filename": "PO.pdf",
+        "page_number": 8,
+        "similarity": 0.6861,
+        "content_snippet": "8 FH-MITTEILUNG NR. 32 / 2021 | 19. Mä Rz 2021 Anlage 2 Wahlkatalog Es handelt sich bei diesem Katalog um eine beispielhafte Aufzählung der angebotenen Veranstaltungen. Diese werden nicht in jedem Semester angeboten. Die aktuell angebotenen Wahlmodule werden rechtzeitig vor Semesterbeginn bekannt ge"
+      },
+      {
+        "rank": 3,
+        "filename": "PO.pdf",
+        "page_number": 3,
+        "similarity": 0.6611,
+        "content_snippet": "Informatik bzw. des Bachelorstudiengangs Informatik mit Praxissemester ergeben sich aus Anlage 1. (6) Lehrveranstaltungen bestehen in der Regel aus Vor lesung, übung und Praktikum (s. Anlage 1). Lehrveranstal tungen können auch in englischer Sprache angeboten werden. Praktika beinhalten eine Anwesen"
+      },
+      {
+        "rank": 4,
+        "filename": "PO.pdf",
+        "page_number": 1,
+        "similarity": 0.6485,
+        "content_snippet": "FH-Mitteilungen Herausgeber: Der Rektor der FH Aachen | Alle Rechte vorbehalten. Wiedergabe oder Druck nur mit Angabe von Quelle und Verfasser. Wiedergabe von Auszügen nur mit Genehmigung der FH Aachen. | Redaktion: Dezernat Z, Silvia Crummenerl, T +49. 241. 6009 51134 Lesbare Fassungen dienen der b"
+      },
+      {
+        "rank": 5,
+        "filename": "PO.pdf",
+        "page_number": 9,
+        "similarity": 0.6422,
+        "content_snippet": "PRüFUNGSORDNUNG | BAcHELORSTUDIENGäNGE INFORMATIK MIT UND OHNE PRAxISSEMESTER 9 (Nichtamtliche lesbare Fassung zur änderungsordnung vom 19.03.2021 | Studienbeginn ab WS 2021/22) Anlage 3 SoftskillWahlkatalog (jeweils 2 Leistungspunkte) ModulNr. Studienfach V Ü P 55671 Training allgemeiner Kompetenze"
+      }
+    ]
+  },
+  {
+    "id": "po_phone_number",
+    "question": "What is the phone number listed for the FH Aachen editorial contact?",
+    "expected_answer": "+49. 241. 6009 51134",
+    "source_file": "PO.pdf",
+    "status": "PASS",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "filename": "PO.pdf",
+        "page_number": 1,
+        "similarity": 0.6476,
+        "content_snippet": "FH-Mitteilungen Herausgeber: Der Rektor der FH Aachen | Alle Rechte vorbehalten. Wiedergabe oder Druck nur mit Angabe von Quelle und Verfasser. Wiedergabe von Auszügen nur mit Genehmigung der FH Aachen. | Redaktion: Dezernat Z, Silvia Crummenerl, T +49. 241. 6009 51134 Lesbare Fassungen dienen der b"
+      },
+      {
+        "rank": 2,
+        "filename": "PO.pdf",
+        "page_number": 2,
+        "similarity": 0.5968,
+        "content_snippet": "2 FH-MITTEILUNG NR. 32 / 2021 | 19. Mä Rz 2021 Prüfungsordnung für die Bachelorstudiengänge „Informatik“ und „Informatik mit Praxissemester“ im Fachbereich Elektrotechnik und Informationstechnik an der Fachhochschule Aachen vom 5. Februar 2015 – FH-Mitteilung Nr. 11/2015 in der Fassung der Bekanntma"
+      },
+      {
+        "rank": 3,
+        "filename": "PO.pdf",
+        "page_number": 6,
+        "similarity": 0.5939,
+        "content_snippet": "6 FH-MITTEILUNG NR. 32 / 2021 | 19. Mä Rz 2021 § 12 | Bachelorarbeit und Kolloquium (1) Die Bachelorarbeit ist eine eigenständige Ausarbeitung mit einer experimentellen, entwerferischen oder einer anderen informationstechnischen Beschreibung und Erläu terung ihrer Lösung. (2) Der Umfang der Bachelor"
+      },
+      {
+        "rank": 4,
+        "filename": "PO.pdf",
+        "page_number": 5,
+        "similarity": 0.5924,
+        "content_snippet": "PRüFUNGSORDNUNG | BAcHELORSTUDIENGäNGE INFORMATIK MIT UND OHNE PRAxISSEMESTER 5 (Nichtamtliche lesbare Fassung zur änderungsordnung vom 19.03.2021 | Studienbeginn ab WS 2021/22) reich absolvierten Module anerkannt und die Fehlversuche angerechnet. § 9 | Praxissemester (1) Entsprechend der zielsetzun"
+      },
+      {
+        "rank": 5,
+        "filename": "PO.pdf",
+        "page_number": 8,
+        "similarity": 0.5787,
+        "content_snippet": "8 FH-MITTEILUNG NR. 32 / 2021 | 19. Mä Rz 2021 Anlage 2 Wahlkatalog Es handelt sich bei diesem Katalog um eine beispielhafte Aufzählung der angebotenen Veranstaltungen. Diese werden nicht in jedem Semester angeboten. Die aktuell angebotenen Wahlmodule werden rechtzeitig vor Semesterbeginn bekannt ge"
+      }
+    ]
+  },
+  {
+    "id": "po_original_date",
+    "question": "What is the FH-Mitteilung number of the original 2015 Prüfungsordnung before the 2021 amendment?",
+    "expected_answer": "FH-Mitteilung Nr. 11/2015",
+    "source_file": "PO.pdf",
+    "status": "PASS",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "filename": "PO.pdf",
+        "page_number": 1,
+        "similarity": 0.7669,
+        "content_snippet": "FH-Mitteilungen Herausgeber: Der Rektor der FH Aachen | Alle Rechte vorbehalten. Wiedergabe oder Druck nur mit Angabe von Quelle und Verfasser. Wiedergabe von Auszügen nur mit Genehmigung der FH Aachen. | Redaktion: Dezernat Z, Silvia Crummenerl, T +49. 241. 6009 51134 Lesbare Fassungen dienen der b"
+      },
+      {
+        "rank": 2,
+        "filename": "PO.pdf",
+        "page_number": 2,
+        "similarity": 0.7193,
+        "content_snippet": "2 FH-MITTEILUNG NR. 32 / 2021 | 19. Mä Rz 2021 Prüfungsordnung für die Bachelorstudiengänge „Informatik“ und „Informatik mit Praxissemester“ im Fachbereich Elektrotechnik und Informationstechnik an der Fachhochschule Aachen vom 5. Februar 2015 – FH-Mitteilung Nr. 11/2015 in der Fassung der Bekanntma"
+      },
+      {
+        "rank": 3,
+        "filename": "PO.pdf",
+        "page_number": 4,
+        "similarity": 0.7153,
+        "content_snippet": "4 FH-MITTEILUNG NR. 32 / 2021 | 19. Mä Rz 2021 jahr mindestens vier Wahlmodule pro Schwerpunkt an geboten werden. (9) Im ersten und zweiten Semester müssen die Studieren den insgesamt zwei Module laut Studienverlaufsplan ( Anlage 1) aus dem Softskill Wahlkatalog (Anlage 3) aus wählen. (10) Im Falle "
+      },
+      {
+        "rank": 4,
+        "filename": "PO.pdf",
+        "page_number": 6,
+        "similarity": 0.695,
+        "content_snippet": "6 FH-MITTEILUNG NR. 32 / 2021 | 19. Mä Rz 2021 § 12 | Bachelorarbeit und Kolloquium (1) Die Bachelorarbeit ist eine eigenständige Ausarbeitung mit einer experimentellen, entwerferischen oder einer anderen informationstechnischen Beschreibung und Erläu terung ihrer Lösung. (2) Der Umfang der Bachelor"
+      },
+      {
+        "rank": 5,
+        "filename": "PO.pdf",
+        "page_number": 7,
+        "similarity": 0.666,
+        "content_snippet": "PRüFUNGSORDNUNG | BAcHELORSTUDIENGäNGE INFORMATIK MIT UND OHNE PRAxISSEMESTER 7 (Nichtamtliche lesbare Fassung zur änderungsordnung vom 19.03.2021 | Studienbeginn ab WS 2021/22) Anlage 1 Studienverlaufspläne Kernstudium Nr. Module und Studienfächer Bezeichnung 1. 2. 3. Sem. LP V ü P V ü P V ü P SWS "
+      }
+    ]
+  },
+  {
+    "id": "p4_overdraft_amount",
+    "question": "What was the exact amount of the Überziehungskredit repaid in Maßnahme 1?",
+    "expected_answer": "1.303,73 TEUR",
+    "source_file": "p4_massnahmen_ziele.md",
+    "status": "PASS",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.6366,
+        "content_snippet": "P4: ~800-1.000 TEUR ✓ - Finanzergebnis: Von -195 TEUR → -100 TEUR --- ### **Maßnahme 2: Personalabbau F&E** 👥 **Was wir gemacht haben:** - ❌ F&E Personal reduziert von 23 MA auf 11 MA (-12 MA) - CityBike: 8 → 4 MA - E-Bike: 15 → 6 MA **Was wir erreichen wollten:** - Personalkosten senken: **~1.260 T"
+      },
+      {
+        "rank": 2,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.6207,
+        "content_snippet": "# Situationsanalyse Periode 3 → 4 ## Reflektion der letzten zurückliegenden Entscheidungen --- ## 1️⃣ RÜCKBLICK: Was waren nach Periode 3 Ihre größten Herausforderungen? ### **Herausforderung 1: Finanzielle Existenzkrise** 🔴 KRITISCH | Kennzahl | Wert P3 | Status | |----------|---------|--------| | "
+      },
+      {
+        "rank": 3,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.5957,
+        "content_snippet": "-1.051 TEUR tödlich - **Hauptproblem:** Kosten wurden nicht genug gesenkt --- ### **Ziel 3: Personalkosten senken** ⚠️ **AMBIVALENT** **Was gut lief:** - ✅ F&E Personal: -12 MA wie geplant (23 → 11) - ✅ Einsparung F&E: ~1.260 TEUR **Was NICHT gut lief:** - ❌ Fertigung: +5 MA statt stabil (31 → 36) -"
+      },
+      {
+        "rank": 4,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.5812,
+        "content_snippet": "- Besser: 3.200 EUR (+300 EUR Marge) - → Bei 800 Stück Absatz (Preis-Volumen Trade-off) - → DB V: +240 TEUR statt -842 TEUR = **+1.082 TEUR Verbesserung!** - Option B: **E-Bike Launch verschieben** - Auf Periode 5 warten - Erst Eigenkapital aufbauen (über +1.000 TEUR) - Dann mit mehr Kapital-Puffer "
+      },
+      {
+        "rank": 5,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.5781,
+        "content_snippet": "- Technologie wäre trotzdem okay: - CB: 133 → ~131 (immer noch top 3) - EB: 113,5 → ~110 (immer noch wettbewerbsfähig) **Learning:** > **\"In Krise: Survival > Innovation. Technologieführung ist schön, aber nicht wenn es dich bankrott macht!\"** --- ### **Fehler 5: Werbung E-Bike zu hoch** ⚠️ NIEDRIG "
+      }
+    ]
+  },
+  {
+    "id": "p4_equity_end",
+    "question": "What was the Eigenkapital at the end of Periode 4?",
+    "expected_answer": "-692,94 TEUR",
+    "source_file": "p4_massnahmen_ziele.md",
+    "status": "PASS",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.7096,
+        "content_snippet": "# Situationsanalyse Periode 3 → 4 ## Reflektion der letzten zurückliegenden Entscheidungen --- ## 1️⃣ RÜCKBLICK: Was waren nach Periode 3 Ihre größten Herausforderungen? ### **Herausforderung 1: Finanzielle Existenzkrise** 🔴 KRITISCH | Kennzahl | Wert P3 | Status | |----------|---------|--------| | "
+      },
+      {
+        "rank": 2,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.6798,
+        "content_snippet": "P4: ~800-1.000 TEUR ✓ - Finanzergebnis: Von -195 TEUR → -100 TEUR --- ### **Maßnahme 2: Personalabbau F&E** 👥 **Was wir gemacht haben:** - ❌ F&E Personal reduziert von 23 MA auf 11 MA (-12 MA) - CityBike: 8 → 4 MA - E-Bike: 15 → 6 MA **Was wir erreichen wollten:** - Personalkosten senken: **~1.260 T"
+      },
+      {
+        "rank": 3,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.6506,
+        "content_snippet": "- Technologie wäre trotzdem okay: - CB: 133 → ~131 (immer noch top 3) - EB: 113,5 → ~110 (immer noch wettbewerbsfähig) **Learning:** > **\"In Krise: Survival > Innovation. Technologieführung ist schön, aber nicht wenn es dich bankrott macht!\"** --- ### **Fehler 5: Werbung E-Bike zu hoch** ⚠️ NIEDRIG "
+      },
+      {
+        "rank": 4,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.6487,
+        "content_snippet": "-1.051 TEUR tödlich - **Hauptproblem:** Kosten wurden nicht genug gesenkt --- ### **Ziel 3: Personalkosten senken** ⚠️ **AMBIVALENT** **Was gut lief:** - ✅ F&E Personal: -12 MA wie geplant (23 → 11) - ✅ Einsparung F&E: ~1.260 TEUR **Was NICHT gut lief:** - ❌ Fertigung: +5 MA statt stabil (31 → 36) -"
+      },
+      {
+        "rank": 5,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.6412,
+        "content_snippet": "- Besser: 3.200 EUR (+300 EUR Marge) - → Bei 800 Stück Absatz (Preis-Volumen Trade-off) - → DB V: +240 TEUR statt -842 TEUR = **+1.082 TEUR Verbesserung!** - Option B: **E-Bike Launch verschieben** - Auf Periode 5 warten - Erst Eigenkapital aufbauen (über +1.000 TEUR) - Dann mit mehr Kapital-Puffer "
+      }
+    ]
+  },
+  {
+    "id": "p4_loss_carryforward",
+    "question": "What was the Verlustvortrag at the end of Periode 4?",
+    "expected_answer": "-3.242,94 TEUR",
+    "source_file": "p4_massnahmen_ziele.md",
+    "status": "PASS",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.6854,
+        "content_snippet": "# Situationsanalyse Periode 3 → 4 ## Reflektion der letzten zurückliegenden Entscheidungen --- ## 1️⃣ RÜCKBLICK: Was waren nach Periode 3 Ihre größten Herausforderungen? ### **Herausforderung 1: Finanzielle Existenzkrise** 🔴 KRITISCH | Kennzahl | Wert P3 | Status | |----------|---------|--------| | "
+      },
+      {
+        "rank": 2,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.6662,
+        "content_snippet": "P4: ~800-1.000 TEUR ✓ - Finanzergebnis: Von -195 TEUR → -100 TEUR --- ### **Maßnahme 2: Personalabbau F&E** 👥 **Was wir gemacht haben:** - ❌ F&E Personal reduziert von 23 MA auf 11 MA (-12 MA) - CityBike: 8 → 4 MA - E-Bike: 15 → 6 MA **Was wir erreichen wollten:** - Personalkosten senken: **~1.260 T"
+      },
+      {
+        "rank": 3,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.6481,
+        "content_snippet": "- Technologie wäre trotzdem okay: - CB: 133 → ~131 (immer noch top 3) - EB: 113,5 → ~110 (immer noch wettbewerbsfähig) **Learning:** > **\"In Krise: Survival > Innovation. Technologieführung ist schön, aber nicht wenn es dich bankrott macht!\"** --- ### **Fehler 5: Werbung E-Bike zu hoch** ⚠️ NIEDRIG "
+      },
+      {
+        "rank": 4,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.642,
+        "content_snippet": "verkaufte E-Bike = Verlust - Selbstkosten (2.891 EUR) >> Marktpreis (~2.000-2.200 EUR) - Entweder: Preis massiv erhöhen (2.900+ EUR) → Absatz bricht ein - Oder: E-Bike stoppen → F&E Investition (2.438 TEUR) abgeschrieben #### 5. **Marktvertrauen verloren** 😞 MITTEL - Nachhaltigkeitsindex: 62,69 → 58"
+      },
+      {
+        "rank": 5,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.6398,
+        "content_snippet": "-1.051 TEUR tödlich - **Hauptproblem:** Kosten wurden nicht genug gesenkt --- ### **Ziel 3: Personalkosten senken** ⚠️ **AMBIVALENT** **Was gut lief:** - ✅ F&E Personal: -12 MA wie geplant (23 → 11) - ✅ Einsparung F&E: ~1.260 TEUR **Was NICHT gut lief:** - ❌ Fertigung: +5 MA statt stabil (31 → 36) -"
+      }
+    ]
+  },
+  {
+    "id": "oos_p2_deposit_calculate_result",
+    "question": "What is the result of calculate() for a Payment of 1000€ with incomingInterest = 0.05?",
+    "expected_answer": "950€",
+    "source_file": "OOS_Praktikum_P2.pdf",
+    "status": "PASS",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "filename": "OOS_Praktikum_P2.pdf",
+        "page_number": 1,
+        "similarity": 0.6931,
+        "content_snippet": "Fachhochschule Aachen Fachbereich Elektrotechnik und Informationstechnik Praktikum: Objektorientierte Softwareentwicklung (OOS) Praktikum Praktikum 2 Aufgabe 1 (Funktionalität auslagern, toString und equals implementieren): In dieser Aufgabe sollen die Gemeinsamkeiten der beiden Klassen Payment und "
+      },
+      {
+        "rank": 2,
+        "filename": "OOS_Praktikum_P2.pdf",
+        "page_number": 2,
+        "similarity": 0.6493,
+        "content_snippet": "Fachhochschule Aachen Fachbereich Elektrotechnik und Informationstechnik Praktikum: Objektorientierte Softwareentwicklung (OOS) Praktikum Aufgabe 3 (Testen der Funktionalität): In dieser Aufgabe soll die in Aufgabe 1 erstellte Funktionalität mit Hilfe einer main-Methode getestet werden. Erstellen Si"
+      },
+      {
+        "rank": 3,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.5541,
+        "content_snippet": "P4: ~800-1.000 TEUR ✓ - Finanzergebnis: Von -195 TEUR → -100 TEUR --- ### **Maßnahme 2: Personalabbau F&E** 👥 **Was wir gemacht haben:** - ❌ F&E Personal reduziert von 23 MA auf 11 MA (-12 MA) - CityBike: 8 → 4 MA - E-Bike: 15 → 6 MA **Was wir erreichen wollten:** - Personalkosten senken: **~1.260 T"
+      },
+      {
+        "rank": 4,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.5503,
+        "content_snippet": "verkaufte E-Bike = Verlust - Selbstkosten (2.891 EUR) >> Marktpreis (~2.000-2.200 EUR) - Entweder: Preis massiv erhöhen (2.900+ EUR) → Absatz bricht ein - Oder: E-Bike stoppen → F&E Investition (2.438 TEUR) abgeschrieben #### 5. **Marktvertrauen verloren** 😞 MITTEL - Nachhaltigkeitsindex: 62,69 → 58"
+      },
+      {
+        "rank": 5,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.5453,
+        "content_snippet": "- Technologie wäre trotzdem okay: - CB: 133 → ~131 (immer noch top 3) - EB: 113,5 → ~110 (immer noch wettbewerbsfähig) **Learning:** > **\"In Krise: Survival > Innovation. Technologieführung ist schön, aber nicht wenn es dich bankrott macht!\"** --- ### **Fehler 5: Werbung E-Bike zu hoch** ⚠️ NIEDRIG "
+      }
+    ]
+  },
+  {
+    "id": "oos_p2_withdrawal_calculate_result",
+    "question": "What is the result of calculate() for a Payment of -1000€ with outgoingInterest = 0.1?",
+    "expected_answer": "-1100€",
+    "source_file": "OOS_Praktikum_P2.pdf",
+    "status": "PASS",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "filename": "OOS_Praktikum_P2.pdf",
+        "page_number": 1,
+        "similarity": 0.7172,
+        "content_snippet": "Fachhochschule Aachen Fachbereich Elektrotechnik und Informationstechnik Praktikum: Objektorientierte Softwareentwicklung (OOS) Praktikum Praktikum 2 Aufgabe 1 (Funktionalität auslagern, toString und equals implementieren): In dieser Aufgabe sollen die Gemeinsamkeiten der beiden Klassen Payment und "
+      },
+      {
+        "rank": 2,
+        "filename": "OOS_Praktikum_P2.pdf",
+        "page_number": 2,
+        "similarity": 0.6657,
+        "content_snippet": "Fachhochschule Aachen Fachbereich Elektrotechnik und Informationstechnik Praktikum: Objektorientierte Softwareentwicklung (OOS) Praktikum Aufgabe 3 (Testen der Funktionalität): In dieser Aufgabe soll die in Aufgabe 1 erstellte Funktionalität mit Hilfe einer main-Methode getestet werden. Erstellen Si"
+      },
+      {
+        "rank": 3,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.5588,
+        "content_snippet": "-1.051 TEUR tödlich - **Hauptproblem:** Kosten wurden nicht genug gesenkt --- ### **Ziel 3: Personalkosten senken** ⚠️ **AMBIVALENT** **Was gut lief:** - ✅ F&E Personal: -12 MA wie geplant (23 → 11) - ✅ Einsparung F&E: ~1.260 TEUR **Was NICHT gut lief:** - ❌ Fertigung: +5 MA statt stabil (31 → 36) -"
+      },
+      {
+        "rank": 4,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.5584,
+        "content_snippet": "verkaufte E-Bike = Verlust - Selbstkosten (2.891 EUR) >> Marktpreis (~2.000-2.200 EUR) - Entweder: Preis massiv erhöhen (2.900+ EUR) → Absatz bricht ein - Oder: E-Bike stoppen → F&E Investition (2.438 TEUR) abgeschrieben #### 5. **Marktvertrauen verloren** 😞 MITTEL - Nachhaltigkeitsindex: 62,69 → 58"
+      },
+      {
+        "rank": 5,
+        "filename": "p4_massnahmen_ziele.md",
+        "page_number": 1,
+        "similarity": 0.5569,
+        "content_snippet": "P4: ~800-1.000 TEUR ✓ - Finanzergebnis: Von -195 TEUR → -100 TEUR --- ### **Maßnahme 2: Personalabbau F&E** 👥 **Was wir gemacht haben:** - ❌ F&E Personal reduziert von 23 MA auf 11 MA (-12 MA) - CityBike: 8 → 4 MA - E-Bike: 15 → 6 MA **Was wir erreichen wollten:** - Personalkosten senken: **~1.260 T"
+      }
+    ]
+  }
+]

@@ -31,10 +31,10 @@ export default function Upload() {
             ? <span className="text-sm text-gray-700 font-medium px-4 text-center truncate w-full text-center">{filename}</span>
             : <>
                 <span className="text-sm text-gray-400">Click to choose a file</span>
-                <span className="text-xs text-gray-300 mt-1">PDF supported</span>
+                <span className="text-xs text-gray-300 mt-1">PDF, DOCX, MD, TXT supported</span>
               </>
           }
-          <input type="file" name="file" accept=".pdf" className="hidden" onChange={handleFileChange} />
+          <input type="file" name="file" accept=".pdf,.md,.txt,.docx" className="hidden" onChange={handleFileChange} />
         </label>
         <button
           type="submit"

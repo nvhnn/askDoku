@@ -1,0 +1,65 @@
+[
+  {
+    "id": "po_mitteilung_nr",
+    "question": "What is the FH-Mitteilung number for the 2021 Prüfungsordnung?",
+    "expected_answer": "Nr. 32 / 2021",
+    "source_file": "PO.pdf",
+    "rationale": "Exact publication ID — appears on the header of every page but has no semantic neighbours that a vector query would naturally retrieve."
+  },
+  {
+    "id": "po_module_number",
+    "question": "What is the module number for Höhere Mathematik 1 für Informatik?",
+    "expected_answer": "51101",
+    "source_file": "PO.pdf",
+    "rationale": "5-digit opaque code with no semantic meaning; embeddings cannot infer '51101' from a math-related query."
+  },
+  {
+    "id": "po_phone_number",
+    "question": "What is the phone number listed for the FH Aachen editorial contact?",
+    "expected_answer": "+49. 241. 6009 51134",
+    "source_file": "PO.pdf",
+    "rationale": "Phone number token has no semantic similarity to common questions about university contacts."
+  },
+  {
+    "id": "po_original_date",
+    "question": "What is the FH-Mitteilung number of the original 2015 Prüfungsordnung before the 2021 amendment?",
+    "expected_answer": "FH-Mitteilung Nr. 11/2015",
+    "source_file": "PO.pdf",
+    "rationale": "Exact document ID embedded in a long reference clause; semantically distant from most study-regulation questions."
+  },
+  {
+    "id": "p4_overdraft_amount",
+    "question": "What was the exact amount of the Überziehungskredit repaid in Maßnahme 1?",
+    "expected_answer": "1.303,73 TEUR",
+    "source_file": "p4_massnahmen_ziele.md",
+    "rationale": "Precise financial figure; a query about 'overdraft repayment' may retrieve chunks about financial measures in general rather than the exact number."
+  },
+  {
+    "id": "p4_equity_end",
+    "question": "What was the Eigenkapital at the end of Periode 4?",
+    "expected_answer": "-692,94 TEUR",
+    "source_file": "p4_massnahmen_ziele.md",
+    "rationale": "Exact negative equity value; vector search on 'Eigenkapital P4' may surface many financial discussion chunks without returning the one containing -692,94."
+  },
+  {
+    "id": "p4_loss_carryforward",
+    "question": "What was the Verlustvortrag at the end of Periode 4?",
+    "expected_answer": "-3.242,94 TEUR",
+    "source_file": "p4_massnahmen_ziele.md",
+    "rationale": "Exact accumulated loss figure that differs from the period loss; conflation likely with semantic search."
+  },
+  {
+    "id": "oos_p2_deposit_calculate_result",
+    "question": "What is the result of calculate() for a Payment of 1000€ with incomingInterest = 0.05?",
+    "expected_answer": "950€",
+    "source_file": "OOS_Praktikum_P2.pdf",
+    "rationale": "Exact numerical result from a worked example; a semantic query about 'calculate payment interest' may retrieve surrounding explanatory text without surfacing the concrete value 950."
+  },
+  {
+    "id": "oos_p2_withdrawal_calculate_result",
+    "question": "What is the result of calculate() for a Payment of -1000€ with outgoingInterest = 0.1?",
+    "expected_answer": "-1100€",
+    "source_file": "OOS_Praktikum_P2.pdf",
+    "rationale": "Exact negative numeric result from a withdrawal example; vector search on 'outgoing interest withdrawal' may return general descriptions of the calculate() semantics rather than the concrete figure -1100."
+  }
+]

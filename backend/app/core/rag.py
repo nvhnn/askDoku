@@ -28,8 +28,9 @@ def retrieve_context(question: str) -> list[dict]:
       {"query_embedding": embedding, "match_count": 5}
    ).execute()
    return [{ 
-        "content": row["content"], 
         "page_number": row["page_number"], 
         "document_id": row["document_id"], 
-        "filename": row["filename"]
+        "filename": row["filename"],
+        "content": row["content"],
+        "similarity": row["similarity"]
         } for row in result.data]

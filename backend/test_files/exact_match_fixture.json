@@ -49,17 +49,17 @@
     "rationale": "Exact accumulated loss figure that differs from the period loss; conflation likely with semantic search."
   },
   {
-    "id": "cover_letter_address",
-    "question": "What street address is listed in the cover letter to AISLER?",
-    "expected_answer": "Hein-Janssen-Str 5",
-    "source_file": "Anschreiben_Incoretex.docx",
-    "rationale": "Street address token has near-zero semantic similarity to typical application-related queries."
+    "id": "oos_p2_deposit_calculate_result",
+    "question": "What is the result of calculate() for a Payment of 1000€ with incomingInterest = 0.05?",
+    "expected_answer": "950€",
+    "source_file": "OOS_Praktikum_P2.pdf",
+    "rationale": "Exact numerical result from a worked example; a semantic query about 'calculate payment interest' may retrieve surrounding explanatory text without surfacing the concrete value 950."
   },
   {
-    "id": "cover_letter_start_date",
-    "question": "When is the applicant available to start work at AISLER?",
-    "expected_answer": "August 1st",
-    "source_file": "Anschreiben_Incoretex.docx",
-    "rationale": "Short date token in a single sentence; a semantic query about availability may pull general sentences about the role instead."
+    "id": "oos_p2_withdrawal_calculate_result",
+    "question": "What is the result of calculate() for a Payment of -1000€ with outgoingInterest = 0.1?",
+    "expected_answer": "-1100€",
+    "source_file": "OOS_Praktikum_P2.pdf",
+    "rationale": "Exact negative numeric result from a withdrawal example; vector search on 'outgoing interest withdrawal' may return general descriptions of the calculate() semantics rather than the concrete figure -1100."
   }
 ]

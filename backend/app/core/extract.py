@@ -58,11 +58,11 @@ def extract_document(filepath: str) -> list[dict]:
     elif filepath.endswith(".docx"):
         doc = docx.Document(filepath)
         text = "\n".join(p.text for p in doc.paragraphs)
-        return text
-    
+        return [{"page_number": 1, "content": text}]
+
     elif filepath.endswith((".txt", ".md")):
         with open(filepath, "r", encoding="UTF-8") as f:
-            return f.read()
+            return [{"page_number": 1, "content": f.read()}]
         
     else:
         raise ValueError(f"Unsupported file type: {filepath}")

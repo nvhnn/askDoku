@@ -13,12 +13,13 @@ def generate_response(question: str, contexts: list[dict]) -> str:
         Question: {question}
     """
 
-    res = deepseek.messages.create(
+    with deepseek.messages.stream(
         model="deepseek-v4-flash",
         max_tokens=500,
         messages=[{"role": "user", "content": prompt}]
-    )
-    return next(block.text for block in res.content if block.type == "text")
+    ) as stream:
+        for text in stream.text_stream:
+            yield text
 
 def retrieve_context(question: str) -> list[dict]:
    embedding = embed_document([question])[0]

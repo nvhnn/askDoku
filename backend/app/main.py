@@ -1,6 +1,8 @@
 from fastapi import FastAPI, UploadFile
+from fastapi.responses import StreamingResponse
 from app.core import ingest_document, retrieve_context, generate_response
 from fastapi.middleware.cors import CORSMiddleware
+import json
 
 app = FastAPI()
 
@@ -21,8 +23,18 @@ async def ingest(file: UploadFile):
     ingest_document(f"test_docs/{file.filename}", content)
     return {"status": "ok"}
 
+def stream_story(question: str, contexts: list[dict]):
+    for context in contexts:
+        yield "data: " + json.dumps(context) + "\n\n"
+    answers = generate_response(question, contexts)
+    for answer in answers:
+        yield "data: " + answer + "\n\n"
+    yield "data: DONE\n\n"
+
 @app.post("/ask")
 async def ask(question: str):
     contexts = retrieve_context(question)
-    answer = generate_response(question, contexts)
-    return {"answer": answer, "sources": contexts}
+    return StreamingResponse(
+        stream_story(question, contexts),
+        media_type="text/event-stream"
+        )

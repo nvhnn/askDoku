@@ -28,7 +28,7 @@ def stream_story(question: str, contexts: list[dict]):
         yield "data: " + json.dumps(context) + "\n\n"
     answers = generate_response(question, contexts)
     for answer in answers:
-        yield "data: " + answer + "\n\n"
+        yield "data: " + answer.replace("\n", "\\n") + "\n\n"
     yield "data: DONE\n\n"
 
 @app.post("/ask")

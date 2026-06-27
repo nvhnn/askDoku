@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Markdown from "react-markdown";
 
 type Source = {
     filename: string
@@ -36,7 +37,7 @@ export default function Ask() {
                 if (!line) continue;
                 const response = line.slice(6);
                 if (response === "DONE") break;
-                response.startsWith("{") ? setSources(prev => [...prev, JSON.parse(response)]) : setAnswer(prev => prev + response)
+                response.startsWith("{") ? setSources(prev => [...prev, JSON.parse(response)]) : setAnswer(prev => prev + response.replaceAll("\\n", "\n"))
             }
         }
         setLoading(false);
@@ -63,7 +64,9 @@ export default function Ask() {
                 </div>
             )}
             {answer && (
-                <p className="w-full max-w-2xl text-gray-700 leading-relaxed italic text-center">{answer}</p>
+                <div className="w-full max-w-2xl bg-white border border-gray-100 rounded-2xl shadow-sm px-8 py-6 prose prose-gray max-w-none">
+                    <Markdown>{answer}</Markdown>
+                </div>
             )}
 
             {sources.length > 0 && (

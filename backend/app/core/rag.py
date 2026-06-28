@@ -1,4 +1,4 @@
-from app.core.clients import deepseek
+from app.core.clients import deepseek, GENERATION_MODEL
 from .embed import embed_document
 from .clients import supabase
 
@@ -15,7 +15,7 @@ def generate_response(question: str, contexts: list[dict]):
     """
 
     with deepseek.messages.stream(
-        model="deepseek-v4-flash",
+        model=GENERATION_MODEL,
         max_tokens=4096,
         messages=[{"role": "user", "content": prompt}]
     ) as stream:

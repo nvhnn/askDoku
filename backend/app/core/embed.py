@@ -1,4 +1,4 @@
-from .clients import gemini
+from .clients import gemini, EMBEDDING_MODEL
 from google.genai import types
 from google.genai.errors import ClientError
 from google.genai.types import HttpOptions, HttpRetryOptions
@@ -20,7 +20,7 @@ def embed_document(chunks: list[str]) -> list[list[float]]:
 		for attempt in range(_MAX_RETRIES):
 			try:
 				res = gemini.models.embed_content(
-						model="gemini-embedding-001",
+						model=EMBEDDING_MODEL,
 						contents=[types.Content(parts=[types.Part.from_text(text=chunk)]) for chunk in batch],
 						config=types.EmbedContentConfig(
 							http_options=HttpOptions(retry_options=HttpRetryOptions(attempts=1))
@@ -32,12 +32,24 @@ def embed_document(chunks: list[str]) -> list[list[float]]:
 				if e.code == 429 and attempt < _MAX_RETRIES - 1:
 					details = e.details.get('error', {}).get('details', [])
 					retry_delay = None
+					is_daily_quota = False
 					for detail in details:
-						if detail.get('@type', '').endswith('.RetryInfo'):
+						atype = detail.get('@type', '')
+						if atype.endswith('.QuotaFailure'):
+							for v in detail.get('violations', []):
+								if 'PerDay' in v.get('quotaId', ''):
+									is_daily_quota = True
+									break
+						if atype.endswith('.RetryInfo'):
 							raw = detail.get('retryDelay', '')
 							if raw.endswith('s'):
 								retry_delay = int(raw[:-1])
-							break
+					if is_daily_quota:
+						raise ClientError(
+							e.code,
+							{"error": {"message": "Daily embedding quota exhausted. Please try again tomorrow or upgrade your API plan."}},
+							None,
+						) from e
 					sleep_for = retry_delay if retry_delay else backoff
 					# add jitter to avoid thundering herd
 					sleep_for += random.uniform(0, sleep_for * 0.2)

@@ -1,7 +1,8 @@
-from fastapi import FastAPI, UploadFile
+from fastapi import FastAPI, UploadFile, HTTPException
 from fastapi.responses import StreamingResponse
 from app.core import ingest_document, retrieve_context, generate_response
 from fastapi.middleware.cors import CORSMiddleware
+from google.genai.errors import ClientError
 import json
 
 app = FastAPI()
@@ -20,7 +21,11 @@ async def ingest(file: UploadFile):
     content = await file.read()
     with open(f"test_docs/{file.filename}", "wb") as f:
         f.write(content)
-    ingest_document(f"test_docs/{file.filename}", content)
+    try:
+        ingest_document(f"test_docs/{file.filename}", content)
+    except ClientError as e:
+        msg = e.details.get("error", {}).get("message", str(e))
+        raise HTTPException(status_code=e.code, detail=msg)
     return {"status": "ok"}
 
 def stream_story(question: str, contexts: list[dict]):

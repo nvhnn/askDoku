@@ -14,5 +14,15 @@ def store_chunks(chunks: list[str], embeddings: list[list[float]]):
 def store_document(document_id: str, filename: str):
     supabase.table("documents").upsert({
         "document_id": document_id, 
-        "filename": filename
+        "filename": filename,
+        "status": "processing"
     }).execute()
+
+def update_document_status(document_id: str, status: str):
+    supabase.table("documents").update({
+        "status": status
+    }).eq('document_id', document_id).execute()
+
+def get_document_status(document_id: str) -> str | None:
+    result = supabase.table("documents").select("status").eq("document_id", document_id).maybe_single().execute()
+    return result.data["status"] if result.data else None

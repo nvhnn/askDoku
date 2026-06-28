@@ -15,8 +15,8 @@ gemini = genai.Client(
     api_key=os.getenv("GEMINI_API_KEY")
 )
 
-EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "gemini-embedding-001")
-GENERATION_MODEL = os.getenv("GENERATION_MODEL", "deepseek-v4-flash")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL") or "gemini-embedding-001"
+GENERATION_MODEL = os.getenv("GENERATION_MODEL") or "deepseek-v4-flash"
 
 supabase = create_client(
     os.getenv("SUPABASE_URL"),

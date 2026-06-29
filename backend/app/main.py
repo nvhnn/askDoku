@@ -18,7 +18,7 @@ app.add_middleware(
 	allow_headers=['*'],
 )
 
-history_convo = {}
+convo = {}
 
 class AskRequest(BaseModel):
 	sessionId: UUID
@@ -41,25 +41,24 @@ def status(document_id: str):
 		raise HTTPException(status_code=404, detail="Document not found")
 	return {"status": status}
 
-def stream_story(question: str, contexts: list[dict], history_convo_list: list[dict]):
+def stream_story(question: str, contexts: list[dict], convo_list: list[dict]):
 	for context in contexts:
 		yield "data: " + json.dumps(context) + "\n\n"
-	answers = generate_response(question, contexts, history_convo_list[-6:])
+	answers = generate_response(question, contexts, convo_list)
 	full_answer = ""
 	for answer in answers:
 		yield "data: " + answer.replace("\n", "\\n") + "\n\n"
 		full_answer += answer
 	yield "data: DONE\n\n"
-	history_convo_list.append({"role": "assistant", "content": full_answer})
+	convo_list.append({"role": "assistant", "content": full_answer})
 
 @app.post("/ask")
 async def ask(data_convo: AskRequest):
-	history_convo.setdefault(data_convo.sessionId, [])
-	history_convo[data_convo.sessionId].append({"role": "user", "content": data_convo.question})
-	query = rewrite_query(history_convo[data_convo.sessionId])
-	print(query)
+	convo.setdefault(data_convo.sessionId, [])
+	convo[data_convo.sessionId].append({"role": "user", "content": data_convo.question})
+	query = rewrite_query(convo[data_convo.sessionId])
 	contexts = retrieve_context(query)
 	return StreamingResponse(
-		stream_story(data_convo.question, contexts, history_convo[data_convo.sessionId]),
+		stream_story(data_convo.question, contexts, convo[data_convo.sessionId]),
 		media_type="text/event-stream"
 	)
